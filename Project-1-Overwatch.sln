@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-1-Overwatch", "Project-1-Overwatch\Project-1-Overwatch.csproj", "{661E4502-453A-4754-929B-7C54DB84145B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{661E4502-453A-4754-929B-7C54DB84145B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661E4502-453A-4754-929B-7C54DB84145B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661E4502-453A-4754-929B-7C54DB84145B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661E4502-453A-4754-929B-7C54DB84145B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03395145-747A-4064-A53A-7ED392DCCB5F}
+	EndGlobalSection
+EndGlobal
