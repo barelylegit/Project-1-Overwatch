@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Hero Details";
+}
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Heroes", "Index", "Heroes")</li>
+    <li>@ViewBag.name</li>
+</ul> 
+<h2>Details for @ViewBag.name</h2>
+
