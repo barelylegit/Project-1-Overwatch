@@ -3,45 +3,33 @@
     ViewBag.Title = "Index";
 }
 
+<head>
+    <link rel="stylesheet" href="~/Content/css/herothumbnail.css" />
+</head>
+
 <div class="jumbotron text-center">
-    <h1>Heroes</h1>
+    <h1 class="big-noodle">Heroes</h1>
 </div>
 
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-lg-offset-3">
-            <img class="img-responsive" src="~/Content/images/roles/OffenseIcon.png" />
-        </div>
-        <div class="col-md-6">
-            <h2>Offense</h2>
+        <div class="col-md-6 col-sm-offset-3">
+            <img class="img-responsive hero-thumbnail" src="~/Content/images/roles/OffenseIcon.png" />
+            <h2 class="big-noodle">Offense</h2>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-1 col-sm-offset-2">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-pharah.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
-        </div>
-        <div class="col-sm-1">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
+        <div class="col-sm-6 col-sm-offset-3">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-pharah.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive hero-thumbnail" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
         </div>
     </div>
     
@@ -50,7 +38,7 @@
             <img class="img-responsive" src="~/Content/images/roles/DefenseIcon.png" />
         </div>
         <div class="col-md-6">
-            <h2>Defense</h2>
+            <h2 class="big-noodle">Defense</h2>
         </div>
     </div>
 
@@ -80,7 +68,7 @@
             <img class="img-responsive" src="~/Content/images/roles/TankIcon.png" />
         </div>
         <div class="col-md-6">
-            <h2>Tank</h2>
+            <h2 class="big-noodle">Tank</h2>
         </div>
     </div>
 
@@ -110,7 +98,7 @@
             <img class="img-responsive" src="~/Content/images/roles/SupportIcon.png" />
         </div>
         <div class="col-md-6">
-            <h2>Support</h2>
+            <h2 class="big-noodle">Support</h2>
         </div>
     </div>
 
