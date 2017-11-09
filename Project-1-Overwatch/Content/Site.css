@@ -8,6 +8,11 @@
     flex: 1;
 }
 
+.navbar-right {
+    margin: 5px;
+}
+
 #logo {
     width: 16%;
+    margin: 5px;
 }
