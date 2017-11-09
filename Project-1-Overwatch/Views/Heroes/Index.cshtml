@@ -2,7 +2,10 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<ul class="breadcrumb">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>Heroes</li>
+</ul> 
 <div class="jumbotron text-center">
     <h1>Heroes</h1>
 </div>
@@ -20,7 +23,7 @@
 
     <div class="row">
         <div class="col-sm-1 col-sm-offset-2">
-            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
+            <p><a href="@Url.Action("heroDetails", "Heroes", new { name = "Doomfist" })"><img class="img-responsive" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
         </div>
         <div class="col-sm-1">
             <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
