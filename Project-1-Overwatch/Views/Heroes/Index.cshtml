@@ -3,22 +3,136 @@
     ViewBag.Title = "Index";
 }
 
-<h1>Heroes</h1>
+<div class="jumbotron text-center">
+    <h1>Heroes</h1>
+</div>
+
 
 <div class="container">
     <div class="row">
+        <div class="col-md-3 col-lg-offset-3">
+            <img class="img-responsive" src="~/Content/images/roles/OffenseIcon.png" />
+        </div>
         <div class="col-md-6">
-            <img class="img-responsive" src="~/Content/images/roles/OffenseIcon.png" /><h2>Offense</h2>
+            <h2>Offense</h2>
         </div>
     </div>
+
     <div class="row">
-        <img class="img-responsive" src="~/Content/images/roles/DefenseIcon.png" /><h2>Defense</h2>
+        <div class="col-sm-1 col-sm-offset-2">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-pharah.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
+        </div>
     </div>
+    
     <div class="row">
-        <img class="img-responsive" src="~/Content/images/roles/TankIcon.png" /><h2>Tank</h2>
+        <div class="col-md-3 col-lg-offset-3">
+            <img class="img-responsive" src="~/Content/images/roles/DefenseIcon.png" />
+        </div>
+        <div class="col-md-6">
+            <h2>Defense</h2>
+        </div>
     </div>
+
     <div class="row">
-        <img class="img-responsive" src="~/Content/images/roles/SupportIcon.png" /><h2>Support</h2>
+        <div class="col-sm-1 col-sm-offset-3">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-bastion.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-hanzo.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-Junkrat.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-mei.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-torbjorn.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-widowmaker.png" /></a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 col-lg-offset-3">
+            <img class="img-responsive" src="~/Content/images/roles/TankIcon.png" />
+        </div>
+        <div class="col-md-6">
+            <h2>Tank</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1 col-sm-offset-3">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-dva.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-orisa.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-reinhardt.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-Roadhog.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-winston.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-zarya.png" /></a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 col-lg-offset-3">
+            <img class="img-responsive" src="~/Content/images/roles/SupportIcon.png" />
+        </div>
+        <div class="col-md-6">
+            <h2>Support</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1 col-sm-offset-3">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
+        </div>
+        <div class="col-sm-1">
+            <p><a href="@Url.Action("", "Heroes")"><img class="img-responsive" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
+        </div>
     </div>
 </div>
 
