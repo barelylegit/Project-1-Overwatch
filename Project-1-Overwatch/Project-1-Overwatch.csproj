@@ -152,8 +152,38 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\heroes\Icon-ana.png" />
+    <Content Include="Content\images\heroes\Icon-bastion.png" />
+    <Content Include="Content\images\heroes\Icon-doomfist.png" />
+    <Content Include="Content\images\heroes\Icon-dva.png" />
+    <Content Include="Content\images\heroes\Icon-genji.png" />
+    <Content Include="Content\images\heroes\Icon-hanzo.png" />
+    <Content Include="Content\images\heroes\Icon-Junkrat.png" />
+    <Content Include="Content\images\heroes\Icon-Lucio.png" />
+    <Content Include="Content\images\heroes\Icon-mccree.png" />
+    <Content Include="Content\images\heroes\Icon-mei.png" />
+    <Content Include="Content\images\heroes\Icon-mercy.png" />
+    <Content Include="Content\images\heroes\Icon-moira.png" />
+    <Content Include="Content\images\heroes\Icon-orisa.png" />
+    <Content Include="Content\images\heroes\Icon-pharah.png" />
+    <Content Include="Content\images\heroes\Icon-reaper.png" />
+    <Content Include="Content\images\heroes\Icon-reinhardt.png" />
+    <Content Include="Content\images\heroes\Icon-Roadhog.png" />
+    <Content Include="Content\images\heroes\Icon-Soldier76.png" />
+    <Content Include="Content\images\heroes\Icon-sombra.png" />
+    <Content Include="Content\images\heroes\Icon-symmetra.png" />
+    <Content Include="Content\images\heroes\Icon-torbjorn.png" />
+    <Content Include="Content\images\heroes\Icon-tracer.png" />
+    <Content Include="Content\images\heroes\Icon-widowmaker.png" />
+    <Content Include="Content\images\heroes\Icon-winston.png" />
+    <Content Include="Content\images\heroes\Icon-zarya.png" />
+    <Content Include="Content\images\heroes\Icon-zenyatta.png" />
+    <Content Include="Content\images\roles\DefenseIcon.png" />
+    <Content Include="Content\images\roles\OffenseIcon.png" />
     <Content Include="Content\images\OG_logo.png" />
     <Content Include="Content\images\overwatch_logo.png" />
+    <Content Include="Content\images\roles\SupportIcon.png" />
+    <Content Include="Content\images\roles\TankIcon.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -164,6 +194,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="fonts\big_noodle_titling_oblique.ttf" />
+    <Content Include="Content\images\raw\OG_logo.pdn" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
