@@ -186,6 +186,10 @@
     <Content Include="Content\images\overwatch_logo.png" />
     <Content Include="Content\images\roles\SupportIcon.png" />
     <Content Include="Content\images\roles\TankIcon.png" />
+    <Content Include="Content\images\team\cGarriss.jpg" />
+    <Content Include="Content\images\team\Christensen, Alex.jpg" />
+    <Content Include="Content\images\team\dFerolino.jpg" />
+    <Content Include="Content\images\team\Jackson, Jex.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
