@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -33,12 +33,16 @@
     </div>
 
     <div class="container-fluid Site-content">
+        <br />
+        <br />
+        <br />
         @RenderBody()
     </div>
 
     <footer>
         <hr />
         <p>&copy; @DateTime.Now.Year - Overwatch Guides</p>
+        <p>Overwatch™ is a trademark of Blizzard Entertainment, Inc., in the U.S. and/or other countries.</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")

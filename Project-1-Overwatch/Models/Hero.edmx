@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OverwatchGuidesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Heroes">
+          <Key>
+            <PropertyRef Name="HeroCode" />
+          </Key>
+          <Property Name="HeroCode" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HeroName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Category" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="Strengths" Type="varchar" MaxLength="50" />
+          <Property Name="Weaknesses" Type="varchar" MaxLength="50" />
+          <Property Name="Counters" Type="varchar" MaxLength="50" />
+          <Property Name="Counteredby" Type="varchar" MaxLength="50" />
+          <Property Name="Synergy" Type="varchar" MaxLength="50" />
+          <Property Name="Discord" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="5000" />
+        </EntityType>
+        <EntityContainer Name="OverwatchGuidesModelStoreContainer">
+          <EntitySet Name="Heroes" EntityType="Self.Heroes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OverwatchGuidesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hero">
+          <Key>
+            <PropertyRef Name="HeroCode" />
+          </Key>
+          <Property Name="HeroCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HeroName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Strengths" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Weaknesses" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Counters" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Counteredby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Synergy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Discord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="OverwatchGuidesEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Heroes" EntityType="Self.Hero" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OverwatchGuidesModelStoreContainer" CdmEntityContainer="OverwatchGuidesEntities1">
+          <EntitySetMapping Name="Heroes">
+            <EntityTypeMapping TypeName="OverwatchGuidesModel.Hero">
+              <MappingFragment StoreEntitySet="Heroes">
+                <ScalarProperty Name="HeroCode" ColumnName="HeroCode" />
+                <ScalarProperty Name="HeroName" ColumnName="HeroName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Strengths" ColumnName="Strengths" />
+                <ScalarProperty Name="Weaknesses" ColumnName="Weaknesses" />
+                <ScalarProperty Name="Counters" ColumnName="Counters" />
+                <ScalarProperty Name="Counteredby" ColumnName="Counteredby" />
+                <ScalarProperty Name="Synergy" ColumnName="Synergy" />
+                <ScalarProperty Name="Discord" ColumnName="Discord" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
