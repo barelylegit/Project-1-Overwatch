@@ -1,7 +1,9 @@
-﻿body {
+﻿
+.hero-thumbnail{
+    padding: 5px;
 }
 
-.hero-thumbnail{
-    float: left;
-    padding: 5px;
+#classpic {
+    margin-top: 10px;
+    
 }
