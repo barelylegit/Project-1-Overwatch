@@ -1,0 +1,12 @@
+﻿body {
+}
+
+@font-face {
+    font-family: big-noodle;
+    src: url(../../fonts/big_noodle_titling_oblique.ttf);
+}
+
+.big-noodle {
+    font-family: big-noodle;
+    font-weight: 700;
+}
