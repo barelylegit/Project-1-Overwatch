@@ -1,0 +1,73 @@
+﻿@model Project_1_Overwatch.Models.Hero
+
+<div>
+    <ul class="breadcrumb pull-left">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Heroes", "Index", "Heroes")</li>
+        <li>@ViewBag.name</li>
+    </ul>
+</div>
+
+<div class="jumbotron text-center">
+    <h1 class="big-noodle">@Html.DisplayFor(model => model.HeroName)</h1>
+    <h3>@Html.DisplayFor(model => model.Category)</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 text-center">
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Strengths</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Counters</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Hero Synergy</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center">
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Weaknesses</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Countered By</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="col-md-3 text-center">
+            <h3 class="big-noodle">Hero Discord</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
