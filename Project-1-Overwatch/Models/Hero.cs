@@ -14,6 +14,7 @@ namespace Project_1_Overwatch.Models
     
     public partial class Hero
     {
+        public string HeroCode { get; set; }
         public string HeroName { get; set; }
         public string Category { get; set; }
         public string Image { get; set; }
@@ -23,5 +24,6 @@ namespace Project_1_Overwatch.Models
         public string Counteredby { get; set; }
         public string Synergy { get; set; }
         public string Discord { get; set; }
+        public string Description { get; set; }
     }
 }

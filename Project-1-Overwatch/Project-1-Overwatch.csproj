@@ -155,23 +155,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Hero.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hero.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Hero.cs">
-      <DependentUpon>Heroes.tt</DependentUpon>
+      <DependentUpon>Hero.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Heroes.Context.cs">
+    <Compile Include="Models\Hero.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Heroes.Context.tt</DependentUpon>
+      <DependentUpon>Hero.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Heroes.cs">
+    <Compile Include="Models\Hero1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Heroes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Heroes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Heroes.edmx</DependentUpon>
+      <DependentUpon>Hero.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -215,15 +215,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Heroes.Context.tt">
+    <Content Include="Models\Hero.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Heroes.Context.cs</LastGenOutput>
-      <DependentUpon>Heroes.edmx</DependentUpon>
+      <DependentUpon>Hero.edmx</DependentUpon>
+      <LastGenOutput>Hero.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Heroes.tt">
+    <Content Include="Models\Hero.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Heroes.edmx</DependentUpon>
-      <LastGenOutput>Heroes.cs</LastGenOutput>
+      <DependentUpon>Hero.edmx</DependentUpon>
+      <LastGenOutput>Hero1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -232,12 +232,12 @@
     </Content>
     <Content Include="fonts\big_noodle_titling_oblique.ttf" />
     <Content Include="Content\images\raw\OG_logo.pdn" />
-    <EntityDeploy Include="Models\Heroes.edmx">
+    <EntityDeploy Include="Models\Hero.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Heroes.Designer.cs</LastGenOutput>
+      <LastGenOutput>Hero.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Heroes.edmx.diagram">
-      <DependentUpon>Heroes.edmx</DependentUpon>
+    <Content Include="Models\Hero.edmx.diagram">
+      <DependentUpon>Hero.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -264,19 +264,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Heroes\Index.cshtml" />
-    <Content Include="Views\Heroes\heroDetails.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Contact\" />
     <Content Include="Views\Heroes\Create.cshtml" />
     <Content Include="Views\Heroes\Delete.cshtml" />
     <Content Include="Views\Heroes\Details.cshtml" />
     <Content Include="Views\Heroes\Edit.cshtml" />
+    <Content Include="Views\Heroes\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Contact\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

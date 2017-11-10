@@ -56,7 +56,7 @@
         <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-widowmaker.png" /></a></p>
         <div class="col-md-3"></div>
     </div>
-    
+
     <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center">
@@ -68,7 +68,7 @@
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-dva.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "dva" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-dva.png" /></a></p>
         <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-orisa.png" /></a></p>
         <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reinhardt.png" /></a></p>
         <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Roadhog.png" /></a></p>
@@ -88,79 +88,12 @@
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
-            <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
         <div class="col-md-3"></div>
     </div>
 </div>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Strengths)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weaknesses)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Counters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Counteredby)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Synergy)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Discord)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Strengths)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weaknesses)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Counters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Counteredby)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Synergy)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Discord)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HeroName }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HeroName }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HeroName })
-        </td>
-    </tr>
-}
-
-</table>

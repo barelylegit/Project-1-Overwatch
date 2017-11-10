@@ -13,7 +13,7 @@ namespace Project_1_Overwatch.Controllers
 {
     public class HeroesController : Controller
     {
-        private OverwatchGuidesEntities db = new OverwatchGuidesEntities();
+        private OverwatchGuidesEntities1 db = new OverwatchGuidesEntities1();
 
         // GET: Heroes
         public async Task<ActionResult> Index()
@@ -33,6 +33,7 @@ namespace Project_1_Overwatch.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.name = hero.HeroName;
             return View(hero);
         }
 
@@ -47,7 +48,7 @@ namespace Project_1_Overwatch.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "HeroName,Category,Image,Strengths,Weaknesses,Counters,Counteredby,Synergy,Discord")] Hero hero)
+        public async Task<ActionResult> Create([Bind(Include = "HeroCode,HeroName,Category,Image,Strengths,Weaknesses,Counters,Counteredby,Synergy,Discord,Description")] Hero hero)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +80,7 @@ namespace Project_1_Overwatch.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "HeroName,Category,Image,Strengths,Weaknesses,Counters,Counteredby,Synergy,Discord")] Hero hero)
+        public async Task<ActionResult> Edit([Bind(Include = "HeroCode,HeroName,Category,Image,Strengths,Weaknesses,Counters,Counteredby,Synergy,Discord,Description")] Hero hero)
         {
             if (ModelState.IsValid)
             {

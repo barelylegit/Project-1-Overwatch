@@ -7,8 +7,9 @@
       <Schema Namespace="OverwatchGuidesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Heroes">
           <Key>
-            <PropertyRef Name="HeroName" />
+            <PropertyRef Name="HeroCode" />
           </Key>
+          <Property Name="HeroCode" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="HeroName" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Category" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Image" Type="varchar" MaxLength="50" />
@@ -18,6 +19,7 @@
           <Property Name="Counteredby" Type="varchar" MaxLength="50" />
           <Property Name="Synergy" Type="varchar" MaxLength="50" />
           <Property Name="Discord" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="5000" />
         </EntityType>
         <EntityContainer Name="OverwatchGuidesModelStoreContainer">
           <EntitySet Name="Heroes" EntityType="Self.Heroes" Schema="dbo" store:Type="Tables" />
@@ -29,8 +31,9 @@
       <Schema Namespace="OverwatchGuidesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Hero">
           <Key>
-            <PropertyRef Name="HeroName" />
+            <PropertyRef Name="HeroCode" />
           </Key>
+          <Property Name="HeroCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="HeroName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Category" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -40,8 +43,9 @@
           <Property Name="Counteredby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Synergy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Discord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="OverwatchGuidesEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="OverwatchGuidesEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Heroes" EntityType="Self.Hero" />
         </EntityContainer>
       </Schema>
@@ -49,10 +53,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="OverwatchGuidesModelStoreContainer" CdmEntityContainer="OverwatchGuidesEntities">
+        <EntityContainerMapping StorageEntityContainer="OverwatchGuidesModelStoreContainer" CdmEntityContainer="OverwatchGuidesEntities1">
           <EntitySetMapping Name="Heroes">
             <EntityTypeMapping TypeName="OverwatchGuidesModel.Hero">
               <MappingFragment StoreEntitySet="Heroes">
+                <ScalarProperty Name="HeroCode" ColumnName="HeroCode" />
                 <ScalarProperty Name="HeroName" ColumnName="HeroName" />
                 <ScalarProperty Name="Category" ColumnName="Category" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
@@ -62,6 +67,7 @@
                 <ScalarProperty Name="Counteredby" ColumnName="Counteredby" />
                 <ScalarProperty Name="Synergy" ColumnName="Synergy" />
                 <ScalarProperty Name="Discord" ColumnName="Discord" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

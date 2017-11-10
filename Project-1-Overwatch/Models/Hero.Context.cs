@@ -13,10 +13,10 @@ namespace Project_1_Overwatch.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class OverwatchGuidesEntities : DbContext
+    public partial class OverwatchGuidesEntities1 : DbContext
     {
-        public OverwatchGuidesEntities()
-            : base("name=OverwatchGuidesEntities")
+        public OverwatchGuidesEntities1()
+            : base("name=OverwatchGuidesEntities1")
         {
         }
     

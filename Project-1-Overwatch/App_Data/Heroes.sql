@@ -12,7 +12,7 @@
 USE [OverwatchGuides]
 GO
 
-/****** Object:  Table [dbo].[Heroes]    Script Date: 11/9/2017 7:56:38 PM ******/
+/****** Object:  Table [dbo].[Heroes]    Script Date: 11/9/2017 9:38:13 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -20,6 +20,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[Heroes](
+	[HeroCode] [varchar](30) NOT NULL,
 	[HeroName] [varchar](30) NOT NULL,
 	[Category] [varchar](30) NOT NULL,
 	[Image] [varchar](50) NULL,
@@ -29,10 +30,12 @@ CREATE TABLE [dbo].[Heroes](
 	[Counteredby] [varchar](50) NULL,
 	[Synergy] [varchar](50) NULL,
 	[Discord] [varchar](50) NULL,
+	[Description] [varchar](5000) NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[HeroName] ASC
+	[HeroCode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 
