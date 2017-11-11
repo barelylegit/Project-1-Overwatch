@@ -3,26 +3,21 @@
     ViewBag.Title = "Contact";
 }
 
-<div class="col-md-1">
-
+<div>
+    <ul class="breadcrumb pull-left">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@ViewBag.Title</li>
+    </ul>
 </div>
-<div class="col-md-4">
-    <h2>@ViewBag.Message</h2>
-    <h3>@ViewBag.Connor</h3>
 
-    <h5>
-        
-            Connor Garris PM<br />
-            Provo, UT 84602<br />
-            Tanner Building IS Lab 303 <br />
-            Phone: 623.230.0355<br />
-    </h5>
-
-
+<div class="jumbotron text-center">
+    <h1 class="big-noodle">Contact Us</h1>
 </div>
-<div class="col-md-5">
+
+<div class="col-md-6 col-md-offset-3">
+    <p>Fill out the form below and we will respond as quickly as we can.</p>
+
     <form action="" method="post">
-        <h3>Contact us </h3>
         <div class="form-group">
             <label for="email">Your Name</label>
             <input class="form-control" name="email">

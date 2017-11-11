@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="~/Content/css/herothumbnail.css" />
 </head>
 
+<div>
+    <ul class="breadcrumb pull-left">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>Heroes</li>
+    </ul>
+</div>
 <div class="jumbotron text-center">
     <h1 class="big-noodle">Heroes</h1>
 </div>
@@ -25,14 +31,14 @@
     </div>
     <div class="row text-center">
         <div class="col-md-2"></div>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-pharah.png" /></a></pclass="col-md-1">
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "doomfist" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "genji" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mccree" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "pharah" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-pharah.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "reaper" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "soldier76" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "sombra" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "tracer" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
         <div class="col-md-2"></div>
     </div>
 
@@ -47,12 +53,12 @@
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-bastion.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-hanzo.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Junkrat.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mei.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-torbjorn.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-widowmaker.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "bastion" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-bastion.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "hanzo" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-hanzo.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "junkrat" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Junkrat.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mei" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mei.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "torbjorn" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-torbjorn.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "widowmaker" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-widowmaker.png" /></a></p>
         <div class="col-md-3"></div>
     </div>
 
@@ -68,11 +74,11 @@
     <div class="row text-center">
         <div class="col-md-3"></div>
         <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "dva" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-dva.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-orisa.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reinhardt.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Roadhog.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-winston.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zarya.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "orisa" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-orisa.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "reinhardt" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reinhardt.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "roadhog" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Roadhog.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "winston" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-winston.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "zarya" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zarya.png" /></a></p>
         <div class="col-md-3"></div>
     </div>
 
@@ -87,12 +93,12 @@
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("", "Heroes")"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "ana" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "lucio" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mercy" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "moira" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "symmetra" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
+        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "zenyatta" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
         <div class="col-md-3"></div>
     </div>
 </div>
