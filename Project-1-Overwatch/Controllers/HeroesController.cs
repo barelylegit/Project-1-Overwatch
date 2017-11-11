@@ -34,6 +34,7 @@ namespace Project_1_Overwatch.Controllers
                 return HttpNotFound();
             }
 
+            // Declares variables
             char delimiter = '*';
             String strengths;
             String weaknesses;
@@ -42,6 +43,7 @@ namespace Project_1_Overwatch.Controllers
             String synergy;
             String discord;
 
+            // Set of if-else statements to determine if data being passed to the string is a string or null value
             if (hero.Strengths == null)
             {
                 strengths = "None";
@@ -96,6 +98,7 @@ namespace Project_1_Overwatch.Controllers
                 discord = hero.Discord;
             }
 
+            // Parses the strings and separates them out out an array using * as the delimiter
             String[] strengthsArray = strengths.Split(delimiter);
             String[] weaknessesArray = weaknesses.Split(delimiter);
             String[] countersArray = counters.Split(delimiter);
@@ -103,6 +106,7 @@ namespace Project_1_Overwatch.Controllers
             String[] synergyArray = synergy.Split(delimiter);
             String[] discordArray = discord.Split(delimiter);
 
+            // Passes all of the arrays to the viewbag to be used on the view
             ViewBag.strengthsArray = strengthsArray;
             ViewBag.weaknessesArray = weaknessesArray;
             ViewBag.countersArray = countersArray;
@@ -110,6 +114,7 @@ namespace Project_1_Overwatch.Controllers
             ViewBag.synergyArray = synergyArray;
             ViewBag.discordArray = discordArray;
             ViewBag.name = hero.HeroName;
+
             return View(hero);
         }
 
