@@ -183,7 +183,7 @@
     <Content Include="App_Data\Heroes.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\herothumbnail.css" />
+    <Content Include="Content\css\heroindex.css" />
     <Content Include="Content\css\og.css" />
     <Content Include="Content\images\heroesConcept\ana-concept.png" />
     <Content Include="Content\images\heroesConcept\bastion-concept.png" />
@@ -237,11 +237,15 @@
     <Content Include="Content\images\heroes\Icon-winston.png" />
     <Content Include="Content\images\heroes\Icon-zarya.png" />
     <Content Include="Content\images\heroes\Icon-zenyatta.png" />
+    <Content Include="Content\images\roles\DefenseIcon-Dark.png" />
     <Content Include="Content\images\roles\DefenseIcon.png" />
+    <Content Include="Content\images\roles\OffenseIcon-Dark.png" />
     <Content Include="Content\images\roles\OffenseIcon.png" />
     <Content Include="Content\images\OG_logo.png" />
     <Content Include="Content\images\overwatch_logo.png" />
+    <Content Include="Content\images\roles\SupportIcon-Dark.png" />
     <Content Include="Content\images\roles\SupportIcon.png" />
+    <Content Include="Content\images\roles\TankIcon-Dark.png" />
     <Content Include="Content\images\roles\TankIcon.png" />
     <Content Include="Content\images\team\cGarriss.jpg" />
     <Content Include="Content\images\team\Christensen, Alex.jpg" />

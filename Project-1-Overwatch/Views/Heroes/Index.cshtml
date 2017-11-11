@@ -5,7 +5,7 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/Content/css/herothumbnail.css" />
+    <link rel="stylesheet" href="~/Content/css/heroindex.css" />
 </head>
 
 <div>
@@ -22,83 +22,295 @@
 <div class="container-fluid">
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <div class="col-md-6 text-center">
-            <img height="" id="classpic" src="~/Content/images/roles/OffenseIcon.png" />
-            <h2 class="big-noodle">Offense</h2>
+        <div class="col-md-6">
+            <img src="~/Content/images/roles/OffenseIcon-Dark.png" />
+            <h1 class="big-noodle">Offense</h1>
         </div>
         <div class="col-md-3"></div>
-
     </div>
+
     <div class="row text-center">
         <div class="col-md-2"></div>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "doomfist" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-doomfist.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "genji" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-genji.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mccree" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mccree.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "pharah" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-pharah.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "reaper" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reaper.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "soldier76" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Soldier76.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "sombra" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-sombra.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "tracer" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-tracer.png" /></a></p>
+        <div class="col-md-8">
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "doomfist" }, null)">
+                    <img src="~/Content/images/heroes/Icon-doomfist.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Doomfist</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "genji" }, null)">
+                    <img src="~/Content/images/heroes/Icon-genji.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Genji</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "mccree" }, null)">
+                    <img src="~/Content/images/heroes/Icon-mccree.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">McCree</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "pharah" }, null)">
+                    <img src="~/Content/images/heroes/Icon-pharah.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Pharah</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "reaper" }, null)">
+                    <img src="~/Content/images/heroes/Icon-reaper.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Reaper</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "soldier76" }, null)">
+                    <img src="~/Content/images/heroes/Icon-Soldier76.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Soldier: 76</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "sombra" }, null)">
+                    <img src="~/Content/images/heroes/Icon-sombra.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Sombra</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "tracer" }, null)">
+                    <img src="~/Content/images/heroes/Icon-tracer.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Tracer</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="col-md-2"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center">
-            <img src="~/Content/images/roles/DefenseIcon.png" />
-            <h2 class="big-noodle">Defense</h2>
+            <img src="~/Content/images/roles/DefenseIcon-Dark.png" />
+            <h1 class="big-noodle">Defense</h1>
         </div>
         <div class="col-md-3"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "bastion" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-bastion.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "hanzo" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-hanzo.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "junkrat" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Junkrat.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mei" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mei.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "torbjorn" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-torbjorn.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "widowmaker" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-widowmaker.png" /></a></p>
+        <div class="col-md-6">
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "bastion" }, null)">
+                    <img src="~/Content/images/heroes/Icon-bastion.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Bastion</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "hanzo" }, null)">
+                    <img src="~/Content/images/heroes/Icon-hanzo.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Hanzo</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "junkrat" }, null)">
+                    <img src="~/Content/images/heroes/Icon-Junkrat.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Junkrat</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "mei" }, null)">
+                    <img src="~/Content/images/heroes/Icon-mei.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Mei</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "torbjorn" }, null)">
+                    <img src="~/Content/images/heroes/Icon-torbjorn.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Torbjörn</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "widowmaker" }, null)">
+                    <img src="~/Content/images/heroes/Icon-widowmaker.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Widowmaker</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="col-md-3"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center">
-            <img src="~/Content/images/roles/TankIcon.png" />
-            <h2 class="big-noodle">Defense</h2>
+            <img src="~/Content/images/roles/TankIcon-Dark.png" />
+            <h1 class="big-noodle">Tank</h1>
         </div>
         <div class="col-md-3"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "dva" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-dva.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "orisa" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-orisa.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "reinhardt" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-reinhardt.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "roadhog" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Roadhog.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "winston" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-winston.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "zarya" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zarya.png" /></a></p>
+        <div class="col-md-6">
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "dva" }, null)">
+                    <img src="~/Content/images/heroes/Icon-dva.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">D. Va</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "orisa" }, null)">
+                    <img src="~/Content/images/heroes/Icon-orisa.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Orisa</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "reinhardt" }, null)">
+                    <img src="~/Content/images/heroes/Icon-reinhardt.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Reinhardt</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "roadhog" }, null)">
+                    <img src="~/Content/images/heroes/Icon-Roadhog.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Roadhog</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "winston" }, null)">
+                    <img src="~/Content/images/heroes/Icon-winston.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Winston</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "zarya" }, null)">
+                    <img src="~/Content/images/heroes/Icon-zarya.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Zarya</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="col-md-3"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-6 text-center">
-            <img src="~/Content/images/roles/SupportIcon.png" />
-            <h2 class="big-noodle">Support</h2>
+            <img src="~/Content/images/roles/SupportIcon-Dark.png" />
+            <h1 class="big-noodle">Support</h1>
         </div>
         <div class="col-md-3"></div>
     </div>
 
     <div class="row text-center">
         <div class="col-md-3"></div>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "ana" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-ana.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "lucio" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-Lucio.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "mercy" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-mercy.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "moira" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-moira.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "symmetra" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-symmetra.png" /></a></p>
-        <p class="col-md-1"><a href="@Url.Action("Details", "Heroes", new { id = "zenyatta" }, null)"><img class="hero-thumbnail" src="~/Content/images/heroes/Icon-zenyatta.png" /></a></p>
+        <div class="col-md-6">
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "ana" }, null)">
+                    <img src="~/Content/images/heroes/Icon-ana.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Ana</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "lucio" }, null)">
+                    <img src="~/Content/images/heroes/Icon-Lucio.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Lúcio</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "mercy" }, null)">
+                    <img src="~/Content/images/heroes/Icon-mercy.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Mercy</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "moira" }, null)">
+                    <img src="~/Content/images/heroes/Icon-moira.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Moira</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "symmetra" }, null)">
+                    <img src="~/Content/images/heroes/Icon-symmetra.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Symmetra</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="img-thumbnail">
+                <a href="@Url.Action("Details", "Heroes", new { id = "zenyatta" }, null)">
+                    <img src="~/Content/images/heroes/Icon-zenyatta.png">
+                    <div class="caption">
+                        <h3 class="big-noodle">Zenyatta</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
         <div class="col-md-3"></div>
     </div>
 </div>
