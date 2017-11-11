@@ -20,8 +20,6 @@ namespace Project_1_Overwatch.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Questions?";
-			ViewBag.Connor = "Ask Connor lolz!";
             return View();
         }
 
