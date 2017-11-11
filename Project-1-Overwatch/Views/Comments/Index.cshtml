@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Project_1_Overwatch.Models.Comment>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body)
+        </td>
+    </tr>
+    <hr />
+}
+
+</table>

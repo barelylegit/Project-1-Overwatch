@@ -26,5 +26,6 @@ namespace Project_1_Overwatch.Models
         }
     
         public virtual DbSet<Hero> Heroes { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
     }
 }

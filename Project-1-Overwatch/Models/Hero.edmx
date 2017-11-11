@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="OverwatchGuidesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="OverwatchGuidesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="CommentCode" />
+          </Key>
+          <Property Name="CommentCode" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Body" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HeroCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
         <EntityType Name="Heroes">
           <Key>
             <PropertyRef Name="HeroCode" />
@@ -21,11 +29,27 @@
           <Property Name="Discord" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="5000" />
         </EntityType>
+        <Association Name="FK_Comments_Heroes">
+          <End Role="Heroes" Type="Self.Heroes" Multiplicity="1" />
+          <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Heroes">
+              <PropertyRef Name="HeroCode" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="HeroCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="OverwatchGuidesModelStoreContainer">
+          <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Heroes" EntityType="Self.Heroes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Comments_Heroes" Association="Self.FK_Comments_Heroes">
+            <End Role="Heroes" EntitySet="Heroes" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="OverwatchGuidesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -44,10 +68,37 @@
           <Property Name="Synergy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Discord" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comments" Relationship="OverwatchGuidesModel.FK_Comments_Heroes" FromRole="Hero" ToRole="Comment" />
         </EntityType>
         <EntityContainer Name="OverwatchGuidesEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Heroes" EntityType="Self.Hero" />
+          <EntitySet Name="Comments" EntityType="OverwatchGuidesModel.Comment" />
+          <AssociationSet Name="FK_Comments_Heroes" Association="OverwatchGuidesModel.FK_Comments_Heroes">
+            <End Role="Hero" EntitySet="Heroes" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentCode" />
+          </Key>
+          <Property Name="CommentCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="HeroCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Hero" Relationship="OverwatchGuidesModel.FK_Comments_Heroes" FromRole="Comment" ToRole="Hero" />
+        </EntityType>
+        <Association Name="FK_Comments_Heroes">
+          <End Type="OverwatchGuidesModel.Hero" Role="Hero" Multiplicity="1" />
+          <End Type="OverwatchGuidesModel.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hero">
+              <PropertyRef Name="HeroCode" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="HeroCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -68,6 +119,15 @@
                 <ScalarProperty Name="Synergy" ColumnName="Synergy" />
                 <ScalarProperty Name="Discord" ColumnName="Discord" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="OverwatchGuidesModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="HeroCode" ColumnName="HeroCode" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="CommentCode" ColumnName="CommentCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
