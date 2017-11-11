@@ -33,6 +33,82 @@ namespace Project_1_Overwatch.Controllers
             {
                 return HttpNotFound();
             }
+
+            char delimiter = '*';
+            String strengths;
+            String weaknesses;
+            String counters;
+            String counteredby;
+            String synergy;
+            String discord;
+
+            if (hero.Strengths == null)
+            {
+                strengths = "None";
+            }
+            else
+            {
+                strengths = hero.Strengths;
+            }
+
+            if (hero.Weaknesses == null)
+            {
+                weaknesses = "None";
+            }
+            else
+            {
+                weaknesses = hero.Weaknesses;
+            }
+
+            if (hero.Counters == null)
+            {
+                counters = "None";
+            }
+            else
+            {
+                counters = hero.Counters;
+            }
+
+            if (hero.Counteredby == null)
+            {
+                counteredby = "None";
+            }
+            else
+            {
+                counteredby = hero.Counteredby;
+            }
+
+            if (hero.Synergy == null)
+            {
+                synergy = "None";
+            }
+            else
+            {
+                synergy = hero.Synergy;
+            }
+
+            if (hero.Discord == null)
+            {
+                discord = "None";
+            }
+            else
+            {
+                discord = hero.Discord;
+            }
+
+            String[] strengthsArray = strengths.Split(delimiter);
+            String[] weaknessesArray = weaknesses.Split(delimiter);
+            String[] countersArray = counters.Split(delimiter);
+            String[] counteredbyArray = counteredby.Split(delimiter);
+            String[] synergyArray = synergy.Split(delimiter);
+            String[] discordArray = discord.Split(delimiter);
+
+            ViewBag.strengthsArray = strengthsArray;
+            ViewBag.weaknessesArray = weaknessesArray;
+            ViewBag.countersArray = countersArray;
+            ViewBag.counteredbyArray = counteredbyArray;
+            ViewBag.synergyArray = synergyArray;
+            ViewBag.discordArray = discordArray;
             ViewBag.name = hero.HeroName;
             return View(hero);
         }
