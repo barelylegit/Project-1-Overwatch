@@ -2,7 +2,12 @@
     ViewBag.Title = "The Team";
 }
 
-
+<div>
+    <ul class="breadcrumb pull-left">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>About</li>
+    </ul>
+</div>
 <div class="jumbotron text-center">
     <h1 class="big-noodle">@ViewBag.Title</h1>
     <h2></h2>
