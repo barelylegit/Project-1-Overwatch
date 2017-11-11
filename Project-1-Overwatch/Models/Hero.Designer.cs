@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\drfer\Source\Repos\Project-1-Overwatch\Project-1-Overwatch\Models\Hero.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\drfer\source\repos\Project-1-Overwatch\Project-1-Overwatch\Models\Hero.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

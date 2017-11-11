@@ -14,6 +14,12 @@ namespace Project_1_Overwatch.Models
     
     public partial class Hero
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hero()
+        {
+            this.Comments = new HashSet<Comment>();
+        }
+    
         public string HeroCode { get; set; }
         public string HeroName { get; set; }
         public string Category { get; set; }
@@ -25,5 +31,8 @@ namespace Project_1_Overwatch.Models
         public string Synergy { get; set; }
         public string Discord { get; set; }
         public string Description { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
