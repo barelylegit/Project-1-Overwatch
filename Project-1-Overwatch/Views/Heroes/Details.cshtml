@@ -10,7 +10,7 @@
 
 <div class="jumbotron text-center">
     <h1 class="big-noodle">@Html.DisplayFor(model => model.HeroName)</h1>
-    <h3>@Html.DisplayFor(model => model.Category)</h3>
+    <h3 class="big-noodle"><img height="25px" width="25px" src="@ViewBag.categoryImage" />@Html.DisplayFor(model => model.Category)</h3>
 </div>
 
 <div class="container">
