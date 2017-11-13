@@ -42,6 +42,7 @@ namespace Project_1_Overwatch.Controllers
             String counteredby;
             String synergy;
             String discord;
+            String categoryImgPath;
 
             // Set of if-else statements to determine if data being passed to the string is a string or null value
             if (hero.Strengths == null)
@@ -98,6 +99,28 @@ namespace Project_1_Overwatch.Controllers
                 discord = hero.Discord;
             }
 
+            // Sets the image path to the icon depending on the hero being passed
+            if (hero.Category.ToLower().Equals("offense"))
+            {
+                categoryImgPath = "/Content/images/roles/OffenseIcon-Dark.png";
+            }
+            else if (hero.Category.ToLower().Equals("defense"))
+            {
+                categoryImgPath = "/Content/images/roles/DefenseIcon-Dark.png";
+            }
+            else if (hero.Category.ToLower().Equals("tank"))
+            {
+                categoryImgPath = "/Content/images/roles/TankIcon-Dark.png";
+            }
+            else if (hero.Category.ToLower().Equals("support"))
+            {
+                categoryImgPath = "/Content/images/roles/SupportIcon-Dark.png";
+            }
+            else
+            {
+                categoryImgPath = null;
+            }
+
             // Parses the strings and separates them out out an array using * as the delimiter
             String[] strengthsArray = strengths.Split(delimiter);
             String[] weaknessesArray = weaknesses.Split(delimiter);
@@ -114,6 +137,7 @@ namespace Project_1_Overwatch.Controllers
             ViewBag.synergyArray = synergyArray;
             ViewBag.discordArray = discordArray;
             ViewBag.name = hero.HeroName;
+            ViewBag.categoryImage = categoryImgPath;
 
             return View(hero);
         }
