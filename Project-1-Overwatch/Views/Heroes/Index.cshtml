@@ -19,7 +19,29 @@
 </div>
 
 
-<div class="container-fluid">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="dropdown text-right">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    Show/Hide
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li class="dropdown-header">Category</li>
+                    <li><a href=".offense" data-toggle="collapse">Offense</a></li>
+                    <li><a href=".defense" data-toggle="collapse">Defense</a></li>
+                    <li><a href=".tank" data-toggle="collapse">Tank</a></li>
+                    <li><a href=".support" data-toggle="collapse">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<div class="container">
     <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -28,7 +50,7 @@
         <div class="col-md-3"></div>
     </div>
 
-    <div class="row text-center">
+    <div class="row text-center offense collapse in">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="img-thumbnail">
@@ -114,7 +136,7 @@
         <div class="col-md-3"></div>
     </div>
 
-    <div class="row text-center">
+    <div class="row text-center defense collapse in">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="img-thumbnail">
@@ -182,7 +204,7 @@
         <div class="col-md-3"></div>
     </div>
 
-    <div class="row text-center">
+    <div class="row text-center tank collapse in">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="img-thumbnail">
@@ -250,7 +272,7 @@
         <div class="col-md-3"></div>
     </div>
 
-    <div class="row text-center">
+    <div class="row text-center support collapse in">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="img-thumbnail">
