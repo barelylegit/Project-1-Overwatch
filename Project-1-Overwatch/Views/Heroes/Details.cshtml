@@ -97,21 +97,43 @@
         <div class="create">
             <form>
                 <div class="form-group">
-                    <label for="comment">Comments</label>
+                    <label for="comment" class="big-noodle">Comments</label>
                     <input type="text" class="form-control" id="comment" placeholder="New Comment">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default pull-right">Submit</button>
             </form>
         </div>
     </div>
     <div class="col-md-3"></div>
 </div>
+
+<br />
+<br />
     
 @* For future partial view *@
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <div class="comment-section">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title big-noodle">
+                        <a data-toggle="collapse" href="#collapse1">New User 1</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>Great information! Thanks for all of your hardwork.</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="comment" class="big-noodle">Replies</label>
+                                <input type="text" class="form-control" id="comment" placeholder="Reply">
+                            </div>
+                            <button type="submit" class="btn btn-default pull-right">Reply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="col-md-3"></div>
