@@ -150,33 +150,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HeroesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\OverwatchGuidesContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs">
-      <DependentUpon>Hero.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hero.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hero.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hero.cs">
-      <DependentUpon>Hero.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hero.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hero.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Hero1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Hero.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Hero.cs" />
+    <Compile Include="Models\HeroComment.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -255,16 +237,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Hero.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Hero.edmx</DependentUpon>
-      <LastGenOutput>Hero.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Hero.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Hero.edmx</DependentUpon>
-      <LastGenOutput>Hero1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -272,13 +244,6 @@
     </Content>
     <Content Include="fonts\big_noodle_titling_oblique.ttf" />
     <Content Include="Content\images\raw\OG_logo.pdn" />
-    <EntityDeploy Include="Models\Hero.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Hero.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Hero.edmx.diagram">
-      <DependentUpon>Hero.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
