@@ -8,12 +8,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Project_1_Overwatch.Models;
+using Project_1_Overwatch.DAL;
 
 namespace Project_1_Overwatch.Controllers
 {
     public class HeroesController : Controller
     {
-        private OverwatchGuidesEntities1 db = new OverwatchGuidesEntities1();
+        private OverwatchGuidesContext db = new OverwatchGuidesContext();
 
         // GET: Heroes
         public async Task<ActionResult> Index()
@@ -22,13 +23,9 @@ namespace Project_1_Overwatch.Controllers
         }
 
         // GET: Heroes/Details/5
-        public async Task<ActionResult> Details(string id)
+        public ActionResult Details(String id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Hero hero = await db.Heroes.FindAsync(id);
+            Hero hero = db.Heroes.Find(id);
             if (hero == null)
             {
                 return HttpNotFound();
